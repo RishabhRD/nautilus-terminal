@@ -14,6 +14,9 @@ You need ```g++``` and ```libnautilus-extension-dev``` packages for installation
 (Uninstall ```nautilus-open-terminal``` or ```nautilus-extension-gnome-terminal``` if installed so, there would be no name-conflicts)
 
 In source folder, execute ```sudo bash install.sh```
+For distro which does not mantain x-terminal-emulator file use: sudo bash install.sh <your-terminal-name>
+
+You can check if x-terminal-emulator is mantained or not by 'ls /usr/bin/x-terminal-emulator'
 
 
 COPYRIGHT 2019 Rishabh Dwivedi <rishabhdwivedi17@gmail.com>
