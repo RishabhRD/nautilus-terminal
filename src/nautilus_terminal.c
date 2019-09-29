@@ -17,6 +17,8 @@
 
 #include <nautilus/nautilus-extension.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
 #include <stdlib.h>
 typedef struct _TerminalExtension TerminalExtension;
 typedef struct _TerminalExtensionClass TerminalExtensionClass;
@@ -51,7 +53,9 @@ static void open_terminal(NautilusMenuItem* item,char* path){
 	g_print("Command: ");
 	g_print(first);
 	g_print("\n");*/
-	system(first);
+	if(fork()==0){
+		system(first);
+	}
 }
 static GList *
 terminal_extension_get_file_items (NautilusMenuProvider *provider,
